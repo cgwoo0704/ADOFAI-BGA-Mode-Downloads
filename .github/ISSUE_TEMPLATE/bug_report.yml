@@ -1,0 +1,98 @@
+name: Bug report / 버그 신고
+description: Report a reproducible BGA Mode problem / 재현 가능한 문제를 알려주세요
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        문제를 재현하는 데 필요한 정보를 가능한 한 정확하게 적어 주세요.
+        Please provide enough detail to reproduce the problem.
+
+  - type: input
+    id: bga-version
+    attributes:
+      label: BGA Mode version / 버전
+      placeholder: 0.1.27
+    validations:
+      required: true
+
+  - type: input
+    id: game-version
+    attributes:
+      label: ADOFAI build / 게임 빌드
+      placeholder: Alpha Build 3.x.x
+    validations:
+      required: true
+
+  - type: input
+    id: umm-version
+    attributes:
+      label: Unity Mod Manager version
+      placeholder: 0.32.5.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location
+    attributes:
+      label: Affected screen / 발생 화면
+      options:
+        - Lobby / 로비
+        - Custom-level selection / 커스텀 레벨 선택
+        - Editor workspace / 에디터 편집
+        - Editor playback / 에디터 플레이
+        - Regular gameplay / 일반 플레이
+        - Mod Manager settings / 모드매니저 설정
+        - Other / 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened? / 발생한 문제
+      description: Include what you expected and what happened instead. / 예상 결과와 실제 결과를 적어 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps / 재현 절차
+      placeholder: |
+        1. Enable BGA Mode
+        2. Open ...
+        3. Start ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility-log
+    attributes:
+      label: Compatibility log / 호환 로그
+      description: Paste the `BGA Mode compatibility` line from the Mod Manager Logs tab.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Video or screenshots / 영상 또는 스크린샷
+      description: Drag and drop files here if available. / 가능하면 파일을 끌어다 놓아 주세요.
+
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other installed mods / 함께 설치된 모드
+      description: List other enabled mods that may interact with gameplay or UI.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation / 확인
+      options:
+        - label: I tested with the latest BGA Mode release. / 최신 BGA Mode 배포판에서 확인했습니다.
+          required: true
