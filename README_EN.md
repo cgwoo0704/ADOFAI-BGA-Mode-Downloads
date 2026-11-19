@@ -110,7 +110,7 @@ ADOFAI alpha updates may affect compatibility.
 
 ## Author and license
 
-- Author: 최건오사임
+- Author: 오사최최고
 - License: MIT License
 
 BGA Mode is an unofficial fan-made mod and is not an official feature or mod from 7th Beat Games.
